@@ -1,0 +1,201 @@
+name,category,manufacturer,price,expiry_date,days_to_expiry,status,member
+Mycodryl Syrup,Tablet,Santiago Lifesciences Pvt Ltd,42.0,2026-05-01,28,Expiring Soon,Sister
+Vildapin 50mg Tablet,Tablet,Manith Healthcare Pvt Ltd,120.0,2026-04-21,18,Expiring Soon,Sister
+Propol 20mg Tablet,Tablet,Lifecare Neuro Products Ltd,27.0,2027-05-23,415,Safe,Sister
+B Cef DS Syrup,Tablet,Welisynth Pharmaceuticals,52.0,2026-03-01,-33,Expired,Dad
+Chophos 200mg Injection,Tablet,Intas Pharmaceuticals Ltd,45.0,2026-07-16,104,Safe,Self
+C-Tech 1000mg Injection,Tablet,Malar Healthcare,78.0,2028-03-28,725,Safe,Dad
+Nimuwin Plus Suspension,Tablet,Makers Laboratories Ltd,7.7,2026-03-04,-30,Expired,Dad
+Arclav DS Dry Syrup,Tablet,RSR Healthcare,125.0,2026-08-19,138,Safe,Sister
+Rosuless-F Tablet,Tablet,Corona Remedies Pvt Ltd,173.9,2026-01-17,-76,Expired,Self
+Varmox-CV 228.5 Tablet DT,Tablet,Varenyam Healthcare Pvt Ltd,63.0,2026-12-31,272,Safe,Self
+Claxin CV 500 mg/125 mg Tablet,Tablet,Prescription Medicines Pvt Ltd,153.0,2028-04-01,729,Safe,Brother
+Brucet 400 mg/333 mg Tablet,Tablet,Micro Labs Ltd,8.75,2027-06-06,429,Safe,Brother
+Cnl Plus 0.25 mg/20 mg Tablet,Tablet,Clyde Biotech  P  Ltd,42.5,2026-01-08,-85,Expired,Mom
+Zedonac 50 mg/500 mg Tablet,Tablet,Alkem Laboratories Ltd,22.0,2026-02-14,-48,Expired,Mom
+Sit DC-M 1000 Tablet,Tablet,FDC Ltd,127.0,2027-10-28,573,Safe,Self
+Closum 10mg Tablet MD,Tablet,Lifecare Innovations Pvt Ltd,67.69,2026-07-21,109,Safe,Mom
+Etudolo MR 400mg/4mg Tablet,Tablet,Unimarck Healthcare Ltd,206.0,2026-04-22,19,Expiring Soon,Dad
+Forecold Tablet,Tablet,Moxy Laboratories Pvt Ltd,10.81,2027-01-06,278,Safe,Mom
+Realb Syrup,Tablet,Cinerea Biotech Pvt Ltd,22.0,2027-09-23,538,Safe,Self
+Q Mox CV Dry Syrup,Tablet,Que Pharma Pvt Ltd,52.9,2026-05-07,34,Safe,Mom
+Ketonac 2% Cream,Tablet,Sonixa Lifecare,62.0,2026-02-25,-37,Expired,Self
+Merohospi 500mg Injection,Tablet,Themis Medicare Ltd,1562.5,2027-12-09,615,Safe,Dad
+Acera 20 Capsule,Tablet,Ipca Laboratories Ltd,90.65,2026-12-20,261,Safe,Dad
+Xappy-DR 80mg/250mg Tablet,Tablet,Sanify Healthcare Pvt  Ltd,49.9,2027-01-25,297,Safe,Brother
+Zonflox-OZ Tablet,Tablet,NV Pharmaceuticals,117.0,2026-02-11,-51,Expired,Brother
+Trihexol 5mg Tablet,Tablet,Chicky Pharma Pvt  Ltd,10.0,2026-08-13,132,Safe,Sister
+Decsir-P 50mg/500mg/10mg Tablet,Tablet,Mits Healthcare Pvt Ltd,58.0,2026-10-19,199,Safe,Brother
+Nisu 100mg Tablet,Tablet,Welkind Pharma,19.0,2026-04-09,6,Expiring Soon,Dad
+Arofen Plus Gel,Tablet,Makers Laboratories Ltd,78.68,2027-11-21,597,Safe,Brother
+Citiwat Plus 500mg/800mg Tablet,Tablet,Watran Pharmaceuticals Pvt. Ltd.,592.0,2026-04-24,21,Expiring Soon,Brother
+Bixro 16mg Tablet,Tablet,Aamorb Pharmaceuticals Pvt Ltd,75.5,2027-11-16,592,Safe,Sister
+Tazo C 250mg/31.25mg Injection,Tablet,Beulah Biomedics Ltd,48.0,2028-01-05,642,Safe,Mom
+Folviz-Plus Tablet,Tablet,Chemo Healthcare Pvt Ltd,240.0,2026-09-29,179,Safe,Sister
+Doxycred-LB 100 Capsule,Tablet,Lifecred Healthcare Pvt. Ltd.,72.0,2028-03-31,728,Safe,Brother
+Amidox 500mg Injection,Tablet,Catholicon Pharmaceuticals Pvt Ltd,55.6,2027-05-07,399,Safe,Dad
+Goncid Suspension Mango Sugar Free,Tablet,Unikind Pharma,80.0,2027-05-16,408,Safe,Mom
+Ebaset 20mg Tablet,Tablet,Kivi Labs Ltd,52.38,2026-04-08,5,Expiring Soon,Mom
+Cefabest SB Injection,Tablet,Balsons Pharmaceutical,135.0,2026-03-12,-22,Expired,Self
+Txr 250 Tablet,Tablet,Servocare Lifesciences Pvt Ltd,180.0,2027-05-04,396,Safe,Self
+Metclav 1.2gm Injection,Tablet,Medishri Healthcare,137.0,2027-09-25,540,Safe,Sister
+Baga-NT Tablet,Tablet,Eris Lifesciences Ltd,426.8,2027-08-02,486,Safe,Sister
+Azitime 200mg Dry Syrup,Tablet,Remedial Healthcare,85.0,2027-11-08,584,Safe,Mom
+Etirest 0.25mg Tablet,Tablet,Sun Pharmaceutical Industries Ltd,71.9,2026-11-25,236,Safe,Sister
+ALPRAQUIL 0.5 MG TABLET,Tablet,Lupin Ltd,22.0,2026-03-04,-30,Expired,Brother
+Neocold AF Syrup,Tablet,Loremchem Pharmaceutical,65.0,2027-06-23,446,Safe,Sister
+Ritham 10mg Tablet,Tablet,Beulah Biomedics Ltd,70.0,2026-03-12,-22,Expired,Brother
+Lidozone  Ear Drop,Tablet,Delcure Life Sciences,129.0,2027-05-05,397,Safe,Dad
+Ifytrox-TB 250mg/31.25mg Injection,Tablet,Sanify Healthcare Pvt  Ltd,45.0,2027-11-23,599,Safe,Self
+Olmezest 10 Tablet,Tablet,Sun Pharmaceutical Industries Ltd,87.5,2026-03-18,-16,Expired,Dad
+Torp-E 10mg/10mg Tablet,Tablet,Pax Healthcare,89.0,2026-07-28,116,Safe,Mom
+Adflam 100mg/500mg Tablet,Tablet,Stanford Organics Pvt Ltd,38.0,2027-12-17,623,Safe,Sister
+Expavon 6% Infusion,Tablet,Neon Laboratories Ltd,598.0,2026-04-17,14,Expiring Soon,Self
+Citirut-M Tablet,Tablet,Trumac Healthcare,90.0,2026-08-24,143,Safe,Dad
+Cefaday 250mg Injection,Tablet,Talent Healthcare,38.82,2027-12-12,618,Safe,Brother
+Broncho Tussin LS Drop,Tablet,Synchem Lab,40.0,2026-12-31,272,Safe,Self
+Duphill 100mg Syrup,Tablet,Leeford Healthcare Ltd,75.0,2028-01-26,663,Safe,Sister
+Get IT Plus  Tablet,Tablet,Lifeline Remedies India Pvt Ltd,109.9,2026-11-26,237,Safe,Mom
+Lamifin Tablet,Tablet,Canixa Life Sciences Pvt,110.0,2026-11-18,229,Safe,Self
+AD Para 100mg/325mg Tablet,Tablet,Rbs Pharmaceutical,45.0,2026-07-20,108,Safe,Sister
+Gutron 2.5mg Tablet,Tablet,Bluemed Pharma Pvt Ltd,1455.0,2027-11-15,591,Safe,Mom
+Roxylab 150mg Tablet,Tablet,Laborate Pharmaceuticals India Ltd,60.0,2027-10-30,575,Safe,Self
+Atubri 500mg Tablet,Tablet,Pfizer Ltd,1730.77,2026-01-11,-82,Expired,Mom
+T-Stat 100mg Injection,Tablet,Mercury Laboratories Ltd,71.14,2027-03-31,362,Safe,Brother
+Levenac P 100mg/325mg Tablet,Tablet,Levenr Pharma,29.0,2026-07-10,98,Safe,Brother
+Biomoxi 0.5% Eye Drop,Tablet,Biodiscovery Lifesciences Pvt Ltd,90.0,2026-12-26,267,Safe,Brother
+Nervduce NT 400mg/10mg Tablet,Tablet,Genome Therapeutics Corporation,198.0,2026-05-02,29,Expiring Soon,Self
+Exermet GZ 60mg/500mg Tablet,Tablet,Cipla Ltd,63.13,2027-06-22,445,Safe,Brother
+Lebbeck Plus 10mg/5mg/200mg Tablet SR,Tablet,Advance Revive,181.0,2027-01-15,287,Safe,Dad
+Arthrox 500mg Tablet,Tablet,Apple Biotech,73.0,2026-12-07,248,Safe,Dad
+Dicka MR Capsule,Tablet,Indian Drugs & Pharmaceuticals Ltd,190.0,2026-08-24,143,Safe,Brother
+Zifrocin Oral Suspension,Tablet,Fortune Labs,90.0,2026-04-25,22,Expiring Soon,Brother
+Akucof M Syrup,Tablet,Akunez Biotech,67.5,2028-01-04,641,Safe,Brother
+Tynex 250mg Tablet,Tablet,Swakam Biotech Private Limited,180.0,2026-09-16,166,Safe,Dad
+Krondec 50mg Injection,Tablet,Krontec Healthcare,145.0,2026-08-24,143,Safe,Self
+Genlapril 2.5mg Tablet,Tablet,Genozed Formulations,18.0,2026-11-13,224,Safe,Mom
+Raplor P Tablet,Tablet,Zyphar's Pharmaceuticals Pvt Ltd,45.0,2026-05-27,54,Safe,Sister
+Nexval 500mg Tablet CR,Tablet,Nexkem Pharmaceuticals Pvt Ltd,124.0,2026-04-18,15,Expiring Soon,Dad
+Canvas A 5mg/50mg Tablet,Tablet,Canipla Care,39.0,2026-04-20,17,Expiring Soon,Brother
+Flucnex 150 Tablet,Tablet,Doctomed,32.0,2027-06-26,449,Safe,Dad
+Clavnox 1000mg/200mg Injection,Tablet,Magma Allianz Laboratories Ltd,144.0,2027-08-13,497,Safe,Sister
+Clearflam 50mg Tablet,Tablet,Glenmark Pharmaceuticals Ltd,21.39,2027-05-05,397,Safe,Dad
+Sylcoff-D Syrup Sugar Free,Tablet,Srigen Pharmaceuticals,120.0,2026-04-11,8,Expiring Soon,Mom
+ALZOLAM 1.5 MG TABLET SR,Tablet,Sun Pharmaceutical Industries Ltd,51.0,2027-06-15,438,Safe,Mom
+Relicin 500mg Injection,Tablet,Rowlinges Life Science,65.0,2026-05-25,52,Safe,Dad
+Olancia Rapitab 10mg Tablet,Tablet,Chemo Biological,49.0,2027-09-12,527,Safe,Dad
+Deltaflox OR Oral Suspension,Tablet,Mecado Healthcare Pvt Ltd,39.0,2026-02-10,-52,Expired,Brother
+Sigdoth 75mg Tablet,Tablet,Sigmund Promedica,79.8,2027-08-13,497,Safe,Dad
+Hiodic Tablet SR,Tablet,Keen Healthcare Pvt Ltd,30.0,2026-09-29,179,Safe,Mom
+Methyl-Pred 1000mg Injection,Tablet,Shreshtha Formulations,1080.0,2028-02-08,676,Safe,Brother
+Reenocef 500mg Injection,Tablet,Micro Organics Pharmaceuticals India Pvt Ltd,37.0,2027-08-07,491,Safe,Self
+Gettimox Eye Drop,Tablet,Gettin Lifesciences Pvt. Ltd.,93.0,2027-08-11,495,Safe,Mom
+Nitocef 500mg Injection,Tablet,Edymax Lifesciences Private Limited,55.45,2026-12-26,267,Safe,Brother
+Stoflox MZS Syrup,Tablet,Estocott Pharma,64.0,2027-09-30,545,Safe,Brother
+Swimpan 40mg Tablet,Tablet,Jabs Biotech Pvt Ltd,60.0,2027-11-26,602,Safe,Sister
+R PRIL 5 MG TABLET,Tablet,Biochem Pharmaceutical Industries,28.75,2027-09-13,528,Safe,Dad
+Fern 50 mg/125 mg Capsule,Tablet,Crest Pharma Pvt Ltd,41.34,2026-06-12,70,Safe,Brother
+Muscoact 8mg Capsule,Tablet,Solvate Laboratries Pvt Ltd,290.0,2026-11-30,241,Safe,Dad
+Ampoxin Plus 250 mg/250 mg Capsule,Tablet,Torrent Pharmaceuticals Ltd,80.0,2026-04-21,18,Expiring Soon,Brother
+Vogisir M 500mg/0.3mg Tablet SR,Tablet,Medcure Pharma,85.45,2026-01-27,-66,Expired,Dad
+Mepfor 2mg/500mg Tablet SR,Tablet,Ansel Healthcare,58.0,2028-01-07,644,Safe,Dad
+Suproga DSR Capsule,Tablet,Ealpharm Life Sciences Pvt Ltd,99.97,2027-11-16,592,Safe,Sister
+Cyclobid Plus Tablet,Tablet,Ikon Remedies Pvt Ltd,54.5,2027-04-24,386,Safe,Self
+Mycincure Injection,Tablet,Medbionic Healthcare,272.0,2026-11-14,225,Safe,Self
+Ketalar 50mg/ml Injection,Tablet,Parke Davis India Ltd,145.08,2028-03-25,722,Safe,Sister
+Isx 40SR Tablet,Tablet,H & Care Incorp,59.0,2027-04-20,382,Safe,Sister
+Elmif 200mg Tablet,Tablet,Elder Pharmaceuticals Ltd,400.0,2027-06-02,425,Safe,Self
+Benimcold Tablet,Tablet,Bayberry Pharmaceuticals Pvt Ltd,34.0,2026-06-19,77,Safe,Brother
+Ancip 500mg Tablet,Tablet,Anrose Pharma Ltd,61.5,2027-12-03,609,Safe,Sister
+Rutrin Tablet,Tablet,Santis Pharmaceuticals Private Limited,169.0,2026-02-04,-58,Expired,Brother
+Rutopax 90mg/48mg/100mg Tablet,Tablet,Pax Healthcare,165.0,2027-04-18,380,Safe,Self
+Corclin 300 Tablet,Tablet,Ultimate Healthcare,247.0,2027-05-17,409,Safe,Mom
+Omitec 20mg Capsule,Tablet,Retec Formulations Pvt Ltd,45.0,2026-08-02,121,Safe,Sister
+Ramcor 5 Capsule,Tablet,Ipca Laboratories Ltd,91.92,2027-09-01,516,Safe,Self
+Nifty-SR Tablet,Tablet,Wanbury Ltd,125.9,2026-05-22,49,Safe,Mom
+Tenlimac M  500 Tablet SR,Tablet,Macleods Pharmaceuticals Pvt Ltd,173.25,2026-04-26,23,Expiring Soon,Dad
+Artivil 120mg Injection,Tablet,Viilbery Healthcare Pvt Ltd,428.57,2027-02-25,328,Safe,Brother
+UDP 5 Tablet,Tablet,Unison Pharmaceuticals Pvt Ltd,24.9,2027-07-13,466,Safe,Dad
+Oxal 200mg Tablet,Tablet,Anvik Biotech,54.65,2026-03-05,-29,Expired,Sister
+Cartel H 40mg/12.5mg Tablet,Tablet,Ikon Pharmachem Pvt Ltd,150.0,2028-04-01,729,Safe,Dad
+Ithiofast Injection,Tablet,6ipain Healthcare Pvt Ltd,54.17,2026-06-19,77,Safe,Mom
+Salbrom GM Expectorant,Tablet,Pramukh Swami Pharma Ltd,33.0,2027-06-01,424,Safe,Sister
+Ilatop 5mg Tablet,Tablet,Ajanta Pharma Ltd,47.16,2026-03-07,-27,Expired,Dad
+Finxime 200mg Tablet,Tablet,Snu Biocare,128.0,2026-04-15,12,Expiring Soon,Brother
+Vorth 200mg Tablet SR,Tablet,Glenmark Pharmaceuticals Ltd,29.5,2026-04-22,19,Expiring Soon,Sister
+Cysmont LC Kid Syrup,Tablet,Mars Therapeutics & Chemicals Ltd,75.0,2026-10-17,197,Safe,Self
+Edvozin M Kid 2.5mg/4mg Tablet,Tablet,Edmund Healthcare,62.0,2026-06-29,87,Safe,Mom
+Val-SP Tablet,Tablet,Valtin Health Care Pvt. Ltd.,100.0,2026-11-09,220,Safe,Brother
+Flobacin 400mg Tablet,Tablet,Saga Laboratories,46.25,2026-01-24,-69,Expired,Self
+Apitase Syrup,Tablet,Allentis Pharmaceuticals Pvt Ltd,72.0,2027-11-16,592,Safe,Mom
+Lecetz Tablet,Tablet,Sehat Pharma Pvt Ltd,30.0,2027-10-21,566,Safe,Sister
+Agicef S 1000mg/500mg Injection,Tablet,Aegle Healthcare,150.0,2028-03-21,718,Safe,Sister
+Nthrosin CV 625 Tablet,Tablet,Numed,140.06,2027-05-24,416,Safe,Brother
+Itrafen 1% Cream,Tablet,Medfence Labs,89.0,2027-09-09,524,Safe,Brother
+Nericef 1.5gm Injection,Tablet,Gerrysun Pharmaceuticals Pvt Ltd,244.0,2026-02-22,-40,Expired,Sister
+Tenifix 20 Tablet,Tablet,Intra Life,125.0,2026-03-11,-23,Expired,Brother
+Ontome 4mg Oral Suspension,Tablet,Epitome Life Sciences,35.5,2026-11-02,213,Safe,Sister
+Lifobid OZ 200mg/500mg Tablet,Tablet,Intra Life,78.0,2026-11-18,229,Safe,Dad
+Serran Forte 10mg Tablet,Tablet,Acto Pharma Pvt Ltd,54.9,2026-07-23,111,Safe,Brother
+Levospan 250mg Tablet,Tablet,Punjab Formulations Ltd,16.05,2027-08-14,498,Safe,Sister
+Hemchek 125mg Injection,Tablet,Fytokem Formulations,20.5,2026-08-03,122,Safe,Brother
+Caslot 6.25mg Tablet,Tablet,Sun Pharmaceutical Industries Ltd,17.93,2026-11-27,238,Safe,Self
+Moxiford D Eye Drop,Tablet,Leeford Healthcare Ltd,18.75,2026-03-27,-7,Expired,Dad
+Zandril 2.5mg/500mg/5mg Syrup,Tablet,Simpson Brawn Pharmaceuticals,52.8,2027-05-14,406,Safe,Mom
+Povinovam Ointment,Tablet,Themis Medicare Ltd,1.25,2027-03-05,336,Safe,Sister
+Aarcim CV 200mg/125mg Tablet,Tablet,Aarcin Pharmaceutical LLP,270.0,2026-02-11,-51,Expired,Brother
+Ziletiz 5mg Tablet,Tablet,Ziel Pharmaceuticals,39.0,2027-06-26,449,Safe,Sister
+Emprox CV 100mg/62.5mg Tablet,Tablet,Emar HealthCare,219.9,2028-03-05,702,Safe,Sister
+Hisnic 16mg Tablet,Tablet,Aeon Remedies,83.65,2026-04-14,11,Expiring Soon,Sister
+Zoflick 200 Tablet,Tablet,Maverick Pharma Pvt Ltd,57.33,2026-04-18,15,Expiring Soon,Dad
+Penseil 40 Tablet,Tablet,Abseil Pharmaceticals Pvt Ltd,75.0,2026-09-05,155,Safe,Dad
+Luliford Cream,Tablet,Leeford Healthcare Ltd,300.0,2026-04-09,6,Expiring Soon,Mom
+Domcolic Suspension,Tablet,Zydus Healthcare Limited,35.28,2026-10-11,191,Safe,Sister
+Sulbact 1000 mg/500 mg Injection,Tablet,Biochem Pharmaceutical Industries,66.3,2026-10-02,182,Safe,Sister
+Drovib MF Tablet,Tablet,Vibcare Pharma Pvt Ltd,90.0,2026-04-07,4,Expiring Soon,Sister
+Esamlovin 1.25mg Tablet,Tablet,East West Pharma,16.2,2027-07-01,454,Safe,Sister
+Vildock 50mg Tablet,Tablet,Albia Biocare,90.0,2026-04-12,9,Expiring Soon,Dad
+Livtor Syrup,Tablet,Torainse Life Care Pvt Ltd,110.0,2027-07-17,470,Safe,Brother
+DOMPAN OD TABLET,Tablet,Medley Pharmaceuticals,107.0,2027-01-13,285,Safe,Brother
+Ramveda 5mg Tablet,Tablet,Vidakem Lifesciences Pvt Ltd,49.5,2028-02-23,691,Safe,Dad
+Duluta 30mg Tablet,Tablet,Bondane Pharma,96.0,2027-06-20,443,Safe,Sister
+Zexto 20mg Tablet,Tablet,Triko Pharmaceuticals,40.2,2026-03-23,-11,Expired,Mom
+Ampurin Plus 250mg/250mg Capsule,Tablet,Elder Pharmaceuticals Ltd,87.0,2026-10-20,200,Safe,Dad
+Cednir 300mg Capsule,Tablet,Abbott,171.25,2026-02-01,-61,Expired,Brother
+Fluchy 200mg Tablet,Tablet,Helplab Healthcare Pvt Ltd,21.64,2026-04-02,-1,Expired,Brother
+Nura DSR Capsule,Tablet,Genesis Biotech Inc,69.0,2027-12-17,623,Safe,Dad
+Fetnim P 100mg/325mg Tablet,Tablet,Mosfet Healthcare Pvt Ltd,30.0,2026-04-05,2,Expiring Soon,Brother
+Clinred A Gel,Tablet,Encore Pharmaceuticals Inc.,213.0,2026-02-20,-42,Expired,Mom
+Deflaquick 6mg Tablet,Tablet,Cure Quick Pharmaceuticals,134.0,2026-03-15,-19,Expired,Brother
+Rabisoul-DSR Capsule,Tablet,Dharam Lifesciences,80.0,2026-08-16,135,Safe,Self
+Cefree CV 200 mg/125 mg Tablet,Tablet,Organic Laboratories,280.67,2027-01-15,287,Safe,Self
+Ulyses 450mg Tablet SR,Tablet,Lupin Ltd,417.8,2028-01-17,654,Safe,Self
+A-Max Fort 80mg/480mg Tablet,Tablet,Tested & Trusted Pharma Pvt Ltd,149.0,2027-06-19,442,Safe,Dad
+Amarglim Plus 1mg/500mg Tablet,Tablet,ASV Laboratories India Pvt Ltd,36.5,2027-10-23,568,Safe,Mom
+Trimacort 40mg Injection,Tablet,Edinburgh Pharmaceuticals,80.0,2026-08-04,123,Safe,Dad
+Manpil 100mg Tablet,Tablet,Psychotropics India Ltd,100.0,2026-04-11,8,Expiring Soon,Dad
+Limcor Chewable Tablet Orange,Tablet,Rivan Pharma,225.0,2028-03-06,703,Safe,Brother
+Tusfin DX Syrup,Tablet,Griffin Biogenesis Pvt Ltd,88.0,2028-03-26,723,Safe,Sister
+Mecopid-G 300mg/500mcg Tablet,Tablet,Pharma Drugs & Chemicals,94.0,2026-04-11,8,Expiring Soon,Sister
+Arkpod CV Dry Syrup,Tablet,Mediarka Lifesciences Pvt Ltd,98.0,2028-02-29,697,Safe,Self
+Amiscape 10mg Tablet,Tablet,Wings Biotech Ltd,24.0,2026-08-24,143,Safe,Brother
+Tario 100 Dry Syrup Pineapple,Tablet,Penlon India Pharmaceuticals,109.0,2026-10-25,205,Safe,Sister
+Synovace P 100 mg/500 mg Tablet,Tablet,Cachet Pharmaceuticals Pvt Ltd,26.0,2026-04-24,21,Expiring Soon,Sister
+Astozin D 15mg/25mg Tablet,Tablet,Astam Health Care Pvt Ltd,50.0,2027-03-05,336,Safe,Brother
+Topisone G Cream,Tablet,Digmedi Pvt Ltd,58.0,2026-01-27,-66,Expired,Self
+Floricon 200 Capsule,Tablet,Neuborn Life Science,275.0,2026-03-05,-29,Expired,Self
+Xcure M 5mg/10mg Tablet,Tablet,Aton Biotech,99.0,2027-03-28,359,Safe,Sister
+Rabby D 30mg/20mg Capsule TR,Tablet,Welbe Life Sciences,53.0,2026-08-10,129,Safe,Sister
+Elnac P Syrup,Tablet,Elixir Pharmacon,45.0,2026-09-14,164,Safe,Brother
+Iqdox 100mg Tablet DT,Tablet,Oracle Health Park Pvt Ltd,114.0,2026-06-23,81,Safe,Mom
+Ugesic Gel,Tablet,Meyer Organics Pvt Ltd,67.77,2026-03-13,-21,Expired,Dad
+Tencort 6 Tablet,Tablet,Stenhill Labs,86.0,2027-11-21,597,Safe,Sister
+Spas 20 mg/500 mg Tablet,Tablet,Torque Pharmaceuticals Pvt Ltd,29.7,2027-05-27,419,Safe,Sister
+Slvrgen Cream,Tablet,Bharat Biotech,707.0,2026-10-08,188,Safe,Brother
+Napain Tablet,Tablet,Times Drugs & Pharmaceuticals Pvt Ltd,25.0,2026-04-22,19,Expiring Soon,Dad
+Rifamus 200mg Tablet,Tablet,Optimus Pharma Pvt Ltd,80.0,2026-01-13,-80,Expired,Brother
+Kapdox 50mg Tablet DT,Tablet,Novagen Pharmaceuticals,68.0,2027-01-17,289,Safe,Sister
+Tydem 4mg Tablet,Tablet,Tested & Trusted Pharma Pvt Ltd,39.9,2027-09-08,523,Safe,Sister
+Omez 10 Capsule,Tablet,Dr Reddy's Laboratories Ltd,39.02,2026-02-11,-51,Expired,Brother
+Seradol 5mg Injection,Tablet,Maneesh Pharmaceuticals Ltd,10.5,2027-03-22,353,Safe,Self
+Ceepro TZ 500mg/600mg Tablet,Tablet,Lincoln Pharmaceuticals Ltd,68.6,2026-03-06,-28,Expired,Brother
