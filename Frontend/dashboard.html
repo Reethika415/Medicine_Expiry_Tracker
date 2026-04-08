@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class='d-flex justify-content-between align-items-center mb-4'>
+<h2>📋 My Medicines</h2>
+<a href='/add' class='btn btn-success'>+ Add Medicine</a>
+</div>
+
+<!-- Summary Cards -->
+<div class='row mb-4'>
+<div class='col-md-4'>
+<div class='card text-white bg-success p-3 text-center'>
+<h5>🟢 Safe</h5>
+<h2 id='safe-count'>
+        {{ medicines|length - expiring|length - expired|length }}
+</h2>
+</div>
+</div>
+<div class='col-md-4'>
+<div class='card text-dark bg-warning p-3 text-center'>
+<h5>🟡 Expiring Soon</h5>
+<h2 id='expiring-count'>{{ expiring|length }}</h2>
+</div>
+</div>
+<div class='col-md-4'>
+<div class='card text-white bg-danger p-3 text-center'>
+<h5>🔴 Expired</h5>
+<h2 id='expired-count'>{{ expired|length }}</h2>
+</div>
+</div>
+</div>
+
+<!-- Medicine Table -->
+<div class='card'>
+<div class='card-body'>
+<table class='table table-hover'>
+<thead class='table-dark'>
+<tr>
+<th>Medicine</th>
+<th>Member</th>
+<th>Category</th>
+<th>Expiry Date</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+        {% for med in medicines %}
+<tr id='med-{{ med.medicine_id }}'
+          class='
+            {% if med.expiry_date < today %}table-danger
+            {% elif med.expiry_date <= today + timedelta(days=30) %}table-warning
+            {% else %}table-success{% endif %}
+'>
+<td>{{ med.name }}</td>
+<td>{{ med.member_id }}</td>
+<td>{{ med.category_id }}</td>
+<td>{{ med.expiry_date }}</td>
+<td>
+            {% if med.expiry_date < today %}
+<span class='badge bg-danger'>Expired</span>
+            {% elif med.expiry_date <= today + timedelta(days=30) %}
+<span class='badge bg-warning text-dark'>Expiring Soon</span>
+            {% else %}
+<span class='badge bg-success'>Safe</span>
+            {% endif %}
+</td>
+</tr>
+        {% endfor %}
+</tbody>
+</table>
+</div>
+</div>
+
+<script>
+  // Auto refresh expiry data every 30 seconds
+  setInterval(function() {
+    fetch('/api/check-expiry')
+      .then(r => r.json())
+      .then(data => {
+        document.getElementById('expiring-count')
+                .innerText = data.expiring_soon;
+        document.getElementById('expired-count')
+                .innerText = data.expired;
+      });
+  }, 30000);
+</script>{% endblock %}
