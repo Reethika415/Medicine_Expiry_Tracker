@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h2 class='mb-2'>📊 Medicine Analytics</h2>
+<p class='text-muted mb-4'>
+  Based on real A-Z India Medicine
+  Dataset (Kaggle) — 200 records
+</p>
+
+<div class='row'>
+<div class='col-md-6 mb-4'>
+<div class='card shadow-sm p-3'>
+<h6 class='text-center fw-bold'>
+        Medicine Status Distribution
+</h6>
+<img
+        src='/static/charts/chart1_status_pie.png'
+        class='img-fluid rounded'>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card shadow-sm p-3'>
+<h6 class='text-center fw-bold'>
+        Medicines by Category
+</h6>
+<img
+        src='/static/charts/chart2_category_bar.png'
+        class='img-fluid rounded'>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card shadow-sm p-3'>
+<h6 class='text-center fw-bold'>
+        Medicines per Family Member
+</h6>
+<img
+        src='/static/charts/chart3_member_bar.png'
+        class='img-fluid rounded'>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card shadow-sm p-3'>
+<h6 class='text-center fw-bold'>
+        Status by Category
+</h6>
+<img
+        src='/static/charts/chart4_status_by_category.png'
+        class='img-fluid rounded'>
+</div>
+</div>
+</div>
+
+<div class='alert alert-info mt-2'>
+<strong>Dataset Source:</strong>
+  A-Z Medicine Dataset of India
+  — Kaggle.com | Records: 200
+</div>
+{% endblock %}
