@@ -10,12 +10,12 @@ SHOW DATABASES;
 +--------------------+
 5 rows in set (0.01 sec)
 
-mysql> CREATE DATABASE medicine_tracker;
+CREATE DATABASE medicine_tracker;
 Query OK, 1 row affected (0.01 sec)
 
-mysql> USE medicine_tracker;
+USE medicine_tracker;
 Database changed
-mysql> CREATE TABLE Users (
+CREATE TABLE Users (
     ->     user_id INT AUTO_INCREMENT PRIMARY KEY,
     ->     name VARCHAR(100) NOT NULL,
     ->     email VARCHAR(100) UNIQUE NOT NULL,
@@ -25,20 +25,19 @@ mysql> CREATE TABLE Users (
     -> );
 Query OK, 0 rows affected (0.04 sec)
 
-mysql> CREATE TABLE Categories (
+CREATE TABLE Categories (
     ->     category_id INT AUTO_INCREMENT PRIMARY KEY,
     ->     name VARCHAR(50) NOT NULL
     -> );
 Query OK, 0 rows affected (0.02 sec)
 
-mysql>
-mysql> -- Insert default categories
-mysql> INSERT INTO Categories (name) VALUES
+Insert default categories
+INSERT INTO Categories (name) VALUES
     -> ('Tablet'), ('Syrup'), ('Injection'), ('Ointment'), ('Drops');
 Query OK, 5 rows affected (0.00 sec)
 Records: 5  Duplicates: 0  Warnings: 0
 
-mysql> CREATE TABLE FamilyMembers (
+CREATE TABLE FamilyMembers (
     ->     member_id INT AUTO_INCREMENT PRIMARY KEY,
     ->     user_id INT NOT NULL,
     ->     name VARCHAR(100) NOT NULL,
@@ -49,7 +48,7 @@ mysql> CREATE TABLE FamilyMembers (
     -> );
 Query OK, 0 rows affected (0.06 sec)
 
-mysql> CREATE TABLE Medicines (
+CREATE TABLE Medicines (
     ->     medicine_id INT AUTO_INCREMENT PRIMARY KEY,
     ->     user_id INT NOT NULL,
     ->     member_id INT NOT NULL,
@@ -67,7 +66,7 @@ mysql> CREATE TABLE Medicines (
     -> );
 Query OK, 0 rows affected (0.05 sec)
 
-mysql> CREATE TABLE Alerts (
+CREATE TABLE Alerts (
     ->     alert_id INT AUTO_INCREMENT PRIMARY KEY,
     ->     medicine_id INT NOT NULL,
     ->     user_id INT NOT NULL,
@@ -81,7 +80,7 @@ mysql> CREATE TABLE Alerts (
     -> );
 Query OK, 0 rows affected (0.05 sec)
 
-mysql> SHOW TABLES;
+SHOW TABLES;
 +----------------------------+
 | Tables_in_medicine_tracker |
 +----------------------------+
@@ -93,7 +92,7 @@ mysql> SHOW TABLES;
 +----------------------------+
 5 rows in set (0.00 sec)
 
-mysql> DESC Users;
+DESC Users;
 +------------+--------------+------+-----+-------------------+-------------------+
 | Field      | Type         | Null | Key | Default           | Extra             |
 +------------+--------------+------+-----+-------------------+-------------------+
@@ -106,7 +105,7 @@ mysql> DESC Users;
 +------------+--------------+------+-----+-------------------+-------------------+
 6 rows in set (0.01 sec)
 
-mysql> DESC Categories;
+DESC Categories;
 +-------------+-------------+------+-----+---------+----------------+
 | Field       | Type        | Null | Key | Default | Extra          |
 +-------------+-------------+------+-----+---------+----------------+
@@ -115,7 +114,7 @@ mysql> DESC Categories;
 +-------------+-------------+------+-----+---------+----------------+
 2 rows in set (0.00 sec)
 
-mysql> DESC FamilyMembers;
+DESC FamilyMembers;
 +-----------+--------------+------+-----+---------+----------------+
 | Field     | Type         | Null | Key | Default | Extra          |
 +-----------+--------------+------+-----+---------+----------------+
@@ -127,7 +126,7 @@ mysql> DESC FamilyMembers;
 +-----------+--------------+------+-----+---------+----------------+
 5 rows in set (0.00 sec)
 
-mysql> DESC Medicines;
+DESC Medicines;
 +---------------+--------------+------+-----+---------+----------------+
 | Field         | Type         | Null | Key | Default | Extra          |
 +---------------+--------------+------+-----+---------+----------------+
@@ -143,7 +142,7 @@ mysql> DESC Medicines;
 +---------------+--------------+------+-----+---------+----------------+
 9 rows in set (0.00 sec)
 
-mysql> DESC Alerts;
+DESC Alerts;
 +-------------+-------------+------+-----+-------------------+-------------------+
 | Field       | Type        | Null | Key | Default           | Extra             |
 +-------------+-------------+------+-----+-------------------+-------------------+
@@ -156,7 +155,7 @@ mysql> DESC Alerts;
 +-------------+-------------+------+-----+-------------------+-------------------+
 6 rows in set (0.00 sec)
 
-mysql> INSERT INTO Users (name, email, password, phone) VALUES
+INSERT INTO Users (name, email, password, phone) VALUES
     -> ('Rahul Kumar', 'rahul@gmail.com', '1234', '9876543210'),
     -> ('Anita Sharma', 'anita@gmail.com', 'abcd', '9123456780'),
     -> ('Vikram Singh', 'vikram@gmail.com', 'pass123', '9988776655'),
@@ -170,7 +169,7 @@ mysql> INSERT INTO Users (name, email, password, phone) VALUES
 Query OK, 10 rows affected (0.01 sec)
 Records: 10  Duplicates: 0  Warnings: 0
 
-mysql> INSERT INTO FamilyMembers (user_id, name, age, relation) VALUES
+INSERT INTO FamilyMembers (user_id, name, age, relation) VALUES
     -> (1, 'Mom', 55, 'Mother'),
     -> (1, 'Dad', 58, 'Father'),
     -> (2, 'Child', 12, 'Son'),
@@ -184,7 +183,7 @@ mysql> INSERT INTO FamilyMembers (user_id, name, age, relation) VALUES
 Query OK, 10 rows affected (0.00 sec)
 Records: 10  Duplicates: 0  Warnings: 0
 
-mysql> INSERT INTO Medicines
+INSERT INTO Medicines
     -> (user_id, member_id, category_id, name, quantity, purchase_date, expiry_date) VALUES
     -> (1, 1, 1, 'Dolo 650', 10, '2025-01-01', '2025-03-01'),   -- expired
     -> (1, 2, 1, 'Metformin', 30, '2025-01-01', '2025-04-20'), -- expires in <30 days
@@ -199,7 +198,7 @@ mysql> INSERT INTO Medicines
 Query OK, 10 rows affected (0.01 sec)
 Records: 10  Duplicates: 0  Warnings: 0
 
-mysql> INSERT INTO Alerts (medicine_id, user_id, alert_type, is_read) VALUES
+INSERT INTO Alerts (medicine_id, user_id, alert_type, is_read) VALUES
     -> (1, 1, 'Expiry Reminder', FALSE),
     -> (2, 1, 'Expiry Reminder', TRUE),
     -> (3, 2, 'Expiry Reminder', FALSE),
@@ -213,7 +212,7 @@ mysql> INSERT INTO Alerts (medicine_id, user_id, alert_type, is_read) VALUES
 Query OK, 10 rows affected (0.01 sec)
 Records: 10  Duplicates: 0  Warnings: 0
 
-mysql> SELECT * FROM Users;
+SELECT * FROM Users;
 +---------+--------------+------------------+-----------+------------+---------------------+
 | user_id | name         | email            | password  | phone      | created_at          |
 +---------+--------------+------------------+-----------+------------+---------------------+
@@ -230,7 +229,7 @@ mysql> SELECT * FROM Users;
 +---------+--------------+------------------+-----------+------------+---------------------+
 10 rows in set (0.00 sec)
 
-mysql> SELECT * FROM Categories;
+SELECT * FROM Categories;
 +-------------+-----------+
 | category_id | name      |
 +-------------+-----------+
@@ -242,7 +241,7 @@ mysql> SELECT * FROM Categories;
 +-------------+-----------+
 5 rows in set (0.00 sec)
 
-mysql> SELECT * FROM FamilyMembers;
+SELECT * FROM FamilyMembers;
 +-----------+---------+-------------+------+-------------+
 | member_id | user_id | name        | age  | relation    |
 +-----------+---------+-------------+------+-------------+
@@ -259,7 +258,7 @@ mysql> SELECT * FROM FamilyMembers;
 +-----------+---------+-------------+------+-------------+
 10 rows in set (0.00 sec)
 
-mysql> SELECT * FROM Medicines;
+SELECT * FROM Medicines;
 +-------------+---------+-----------+-------------+---------------+----------+---------------+-------------+--------+
 | medicine_id | user_id | member_id | category_id | name          | quantity | purchase_date | expiry_date | status |
 +-------------+---------+-----------+-------------+---------------+----------+---------------+-------------+--------+
@@ -276,7 +275,7 @@ mysql> SELECT * FROM Medicines;
 +-------------+---------+-----------+-------------+---------------+----------+---------------+-------------+--------+
 10 rows in set (0.00 sec)
 
-mysql> SELECT * FROM Alerts;
+SELECT * FROM Alerts;
 +----------+-------------+---------+-----------------+---------------------+---------+
 | alert_id | medicine_id | user_id | alert_type      | sent_at             | is_read |
 +----------+-------------+---------+-----------------+---------------------+---------+
@@ -293,7 +292,7 @@ mysql> SELECT * FROM Alerts;
 +----------+-------------+---------+-----------------+---------------------+---------+
 10 rows in set (0.00 sec)
 
-mysql> SELECT m.name AS Medicine, f.name AS Member,
+SELECT m.name AS Medicine, f.name AS Member,
     ->        c.name AS Category, m.expiry_date, m.status
     -> FROM Medicines m
     -> JOIN FamilyMembers f ON m.member_id = f.member_id
@@ -307,7 +306,7 @@ mysql> SELECT m.name AS Medicine, f.name AS Member,
 +-----------+--------+----------+-------------+--------+
 2 rows in set (0.00 sec)
 
-mysql> SELECT m.name, f.name AS Member, m.expiry_date,
+SELECT m.name, f.name AS Member, m.expiry_date,
     ->        DATEDIFF(m.expiry_date, CURDATE()) AS days_left
     -> FROM Medicines m
     -> JOIN FamilyMembers f ON m.member_id = f.member_id
@@ -321,7 +320,7 @@ mysql> SELECT m.name, f.name AS Member, m.expiry_date,
 +---------------+-------------+-------------+-----------+
 3 rows in set (0.00 sec)
 
-mysql> SELECT m.name, f.name AS Member,
+SELECT m.name, f.name AS Member,
     ->        m.expiry_date AS expired_on
     -> FROM Medicines m
     -> JOIN FamilyMembers f ON m.member_id = f.member_id
@@ -336,7 +335,7 @@ mysql> SELECT m.name, f.name AS Member,
 +---------------+--------+------------+
 4 rows in set (0.00 sec)
 
-mysql> SELECT c.name AS Category,
+SELECT c.name AS Category,
     ->        COUNT(*) AS Total_Medicines
     -> FROM Medicines m
     -> JOIN Categories c ON m.category_id = c.category_id
@@ -352,7 +351,7 @@ mysql> SELECT c.name AS Category,
 +-----------+-----------------+
 5 rows in set (0.00 sec)
 
-mysql> SELECT f.name AS Member,
+SELECT f.name AS Member,
     ->        COUNT(*) AS Total_Medicines
     -> FROM Medicines m
     -> JOIN FamilyMembers f ON m.member_id = f.member_id
