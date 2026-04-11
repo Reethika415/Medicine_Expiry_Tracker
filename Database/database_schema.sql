@@ -1,4 +1,4 @@
-mysql> SHOW DATABASES;
+SHOW DATABASES;
 +--------------------+
 | Database           |
 +--------------------+
