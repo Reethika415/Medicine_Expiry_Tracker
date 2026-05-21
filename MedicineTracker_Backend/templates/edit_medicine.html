@@ -3,19 +3,23 @@
 <div class='row justify-content-center'>
 <div class='col-md-6'>
 <div class='card p-4 shadow'>
-<h4 class='mb-3'>➕ Add New Medicine</h4>
+<h4 class='mb-3'>✏️ Edit Medicine</h4>
 <div>
     <div class='mb-3'>
         <label>Medicine Name</label>
-        <input type='text' id='med_name' class='form-control' placeholder='e.g. Dolo 650' required autocomplete='off'>
-        <small id='name-feedback' class='text-muted'></small>
+        <input type='text' id='med_name' class='form-control'
+               value='{{ medicine.name }}' required autocomplete='off'>
+        <small id='name-feedback' class='text-success'>✅ Valid medicine name</small>
     </div>
     <div class='mb-3'>
         <label>Family Member</label>
         <select id='member_id' class='form-select'>
             <option value=''>Select Member</option>
             {% for m in members %}
-            <option value='{{ m.member_id }}'>{{ m.name }}</option>
+            <option value='{{ m.member_id }}'
+                {% if m.member_id == medicine.member_id %}selected{% endif %}>
+                {{ m.name }}
+            </option>
             {% endfor %}
         </select>
     </div>
@@ -24,24 +28,31 @@
         <select id='category_id' class='form-select'>
             <option value=''>Select Category</option>
             {% for c in categories %}
-            <option value='{{ c.category_id }}' data-name='{{ c.name.lower() }}'>{{ c.name }}</option>
+            <option value='{{ c.category_id }}'
+                data-name='{{ c.name.lower() }}'
+                {% if c.category_id == medicine.category_id %}selected{% endif %}>
+                {{ c.name }}
+            </option>
             {% endfor %}
         </select>
         <small id='category-feedback' class='text-info'></small>
     </div>
     <div class='mb-3'>
         <label>Quantity</label>
-        <input type='number' id='quantity' class='form-control' value='1' min='1'>
+        <input type='number' id='quantity' class='form-control'
+               value='{{ medicine.quantity if medicine.quantity else 1 }}' min='1'>
     </div>
     <div class='mb-3'>
         <label>Purchase Date</label>
-        <input type='date' id='purchase_date' class='form-control'>
+        <input type='date' id='purchase_date' class='form-control'
+               value='{{ medicine.purchase_date }}'>
     </div>
     <div class='mb-3'>
         <label>Expiry Date</label>
-        <input type='date' id='expiry_date' class='form-control'>
+        <input type='date' id='expiry_date' class='form-control'
+               value='{{ medicine.expiry_date }}'>
     </div>
-    <button onclick='submitMedicine()' class='btn btn-success w-100'>Save Medicine</button>
+    <button onclick='submitEdit()' class='btn btn-success w-100'>Update Medicine</button>
     <a href='/dashboard' class='btn btn-secondary w-100 mt-2'>Cancel</a>
 </div>
 </div>
@@ -49,9 +60,8 @@
 </div>
 
 <script>
-let nameValid = false;
+let nameValid = true; // Pre-filled name is already valid
 
-// Category keyword mapping
 const categoryKeywords = {
     'syrup': ['syrup', 'suspension', 'linctus', 'elixir', 'mixture', 'drops', 'solution'],
     'tablet': ['tablet', 'tab', 'pill', 'capsule', 'cap', '650', '500', '250', '400', 'mg'],
@@ -69,11 +79,9 @@ function autoDetectCategory(medicineName) {
     const options = categorySelect.options;
     const feedback = document.getElementById('category-feedback');
 
-    // Check keywords against medicine name
     for (const [catType, keywords] of Object.entries(categoryKeywords)) {
         for (const keyword of keywords) {
             if (nameLower.includes(keyword)) {
-                // Find matching option
                 for (let i = 0; i < options.length; i++) {
                     const optName = options[i].getAttribute('data-name') || '';
                     if (optName.includes(catType) || catType.includes(optName)) {
@@ -86,34 +94,21 @@ function autoDetectCategory(medicineName) {
             }
         }
     }
-
-    // Default to Tablet if no match found
-    for (let i = 0; i < options.length; i++) {
-        const optName = options[i].getAttribute('data-name') || '';
-        if (optName.includes('tablet')) {
-            categorySelect.value = options[i].value;
-            feedback.textContent = '🔍 Defaulted to Tablet — please verify';
-            feedback.className = 'text-warning';
-            return;
-        }
-    }
 }
 
 document.getElementById('med_name').addEventListener('input', function() {
     const name = this.value.trim();
-    if (name.length >= 3) {
-        autoDetectCategory(name);
-    }
+    if (name.length >= 3) autoDetectCategory(name);
 });
 
 document.getElementById('med_name').addEventListener('blur', function() {
     const name = this.value.trim();
-    if(!name) return;
+    if (!name) return;
     fetch('/api/validate-medicine?name=' + encodeURIComponent(name))
     .then(r => r.json())
     .then(data => {
         const fb = document.getElementById('name-feedback');
-        if(data.valid) {
+        if (data.valid) {
             fb.className = 'text-success';
             fb.innerText = '✅ ' + data.message;
             nameValid = true;
@@ -126,13 +121,13 @@ document.getElementById('med_name').addEventListener('blur', function() {
     });
 });
 
-function submitMedicine() {
+function submitEdit() {
     const name = document.getElementById('med_name').value.trim();
-    if(!name) { alert('Please enter medicine name'); return; }
-    if(!nameValid) { alert('Please enter a valid medicine name from the dataset'); return; }
-    if(!document.getElementById('member_id').value) { alert('Please select a family member'); return; }
-    if(!document.getElementById('category_id').value) { alert('Please select a category'); return; }
-    if(!document.getElementById('expiry_date').value) { alert('Please enter expiry date'); return; }
+    if (!name) { alert('Please enter medicine name'); return; }
+    if (!nameValid) { alert('Please enter a valid medicine name'); return; }
+    if (!document.getElementById('member_id').value) { alert('Please select a family member'); return; }
+    if (!document.getElementById('category_id').value) { alert('Please select a category'); return; }
+    if (!document.getElementById('expiry_date').value) { alert('Please enter expiry date'); return; }
 
     const formData = new FormData();
     formData.append('name', name);
@@ -142,8 +137,8 @@ function submitMedicine() {
     formData.append('purchase_date', document.getElementById('purchase_date').value);
     formData.append('expiry_date', document.getElementById('expiry_date').value);
 
-    fetch('/add', {method:'POST', body: formData})
-    .then(r => { if(r.redirected) window.location.href = r.url; });
+    fetch('/edit/{{ medicine.medicine_id }}', {method: 'POST', body: formData})
+    .then(r => { if (r.redirected) window.location.href = r.url; });
 }
 </script>
 {% endblock %}

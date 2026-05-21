@@ -35,6 +35,7 @@
 <th>Medicine</th>
 <th>Member</th>
 <th>Category</th>
+<th>Qty</th>
 <th>Expiry Date</th>
 <th>Status</th>
 <th>Actions</th>
@@ -44,17 +45,18 @@
 {% for med in medicines %}
 <tr id='med-{{ med.medicine_id }}' class='
     {% if med.expiry_date < today %}table-danger
-    {% elif med.expiry_date <= today + timedelta(days=30) %}table-warning
+    {% elif med.expiry_date <= today + timedelta(days=90) %}table-warning
     {% else %}table-success{% endif %}
 '>
 <td>{{ med.name }}</td>
 <td>{{ med.member_name }}</td>
 <td>{{ med.category_name }}</td>
+<td>{{ med.quantity if med.quantity else 1 }}</td>
 <td>{{ med.expiry_date }}</td>
 <td>
     {% if med.expiry_date < today %}
     <span class='badge bg-danger'>Expired</span>
-    {% elif med.expiry_date <= today + timedelta(days=30) %}
+    {% elif med.expiry_date <= today + timedelta(days=90) %}
     <span class='badge bg-warning text-dark'>Expiring Soon</span>
     {% else %}
     <span class='badge bg-success'>Safe</span>
@@ -77,8 +79,10 @@ setInterval(function() {
   fetch('/api/check-expiry')
     .then(r => r.json())
     .then(data => {
-      document.getElementById('expiring-count').innerText = data.expiring_soon;
-      document.getElementById('expired-count').innerText = data.expired;
+      if(data.expiring_soon !== undefined) {
+        document.getElementById('expiring-count').innerText = data.expiring_soon;
+        document.getElementById('expired-count').innerText = data.expired;
+      }
     });
 }, 30000);
 </script>
