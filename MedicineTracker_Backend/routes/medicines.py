@@ -142,7 +142,7 @@ def validate_medicine():
     if suggestions:
         return jsonify({'valid': False, 'message': f'Not found. Did you mean: {", ".join(suggestions)}?'})
     
-    return jsonify({'valid': False, 'message': 'Medicine not found. Please check the spelling.'})
+    return jsonify({'valid': True, 'message': 'Medicine name accepted ✅'})
 @medicines.route('/api/check-expiry')
 def check_expiry():
     if 'user_id' not in session:
