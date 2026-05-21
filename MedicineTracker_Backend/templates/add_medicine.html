@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class='row justify-content-center'>
+<div class='col-md-6'>
+<div class='card p-4 shadow'>
+<h4 class='mb-3'>➕ Add New Medicine</h4>
+<div>
+    <div class='mb-3'>
+        <label>Medicine Name</label>
+        <input type='text' id='med_name' class='form-control' placeholder='e.g. Dolo 650' required>
+        <small id='name-feedback' class='text-muted'></small>
+    </div>
+    <div class='mb-3'>
+        <label>Family Member</label>
+        <select id='member_id' class='form-select'>
+            <option value=''>Select Member</option>
+            {% for m in members %}
+            <option value='{{ m.member_id }}'>{{ m.name }}</option>
+            {% endfor %}
+        </select>
+    </div>
+    <div class='mb-3'>
+        <label>Category</label>
+        <select id='category_id' class='form-select'>
+            <option value=''>Select Category</option>
+            {% for c in categories %}
+            <option value='{{ c.category_id }}'>{{ c.name }}</option>
+            {% endfor %}
+        </select>
+    </div>
+    <div class='mb-3'>
+        <label>Quantity</label>
+        <input type='number' id='quantity' class='form-control' value='1'>
+    </div>
+    <div class='mb-3'>
+        <label>Purchase Date</label>
+        <input type='date' id='purchase_date' class='form-control'>
+    </div>
+    <div class='mb-3'>
+        <label>Expiry Date</label>
+        <input type='date' id='expiry_date' class='form-control'>
+    </div>
+    <button onclick='submitMedicine()' class='btn btn-success w-100'>Save Medicine</button>
+    <a href='/dashboard' class='btn btn-secondary w-100 mt-2'>Cancel</a>
+</div>
+</div>
+</div>
+</div>
+<script>
+let nameValid = false;
+
+document.getElementById('med_name').addEventListener('blur', function() {
+    const name = this.value.trim();
+    if(!name) return;
+    fetch('/api/validate-medicine?name=' + encodeURIComponent(name))
+    .then(r => r.json())
+    .then(data => {
+        const fb = document.getElementById('name-feedback');
+        if(data.valid) {
+            fb.className = 'text-success';
+            fb.innerText = '✅ ' + data.message;
+            nameValid = true;
+        } else {
+            fb.className = 'text-danger';
+            fb.innerText = '⚠️ ' + data.message;
+            nameValid = false;
+        }
+    });
+});
+
+function submitMedicine() {
+    const name = document.getElementById('med_name').value.trim();
+    if(!name) { alert('Please enter medicine name'); return; }
+    if(!nameValid) { alert('Please enter a valid medicine name from the dataset'); return; }
+
+    const formData = new FormData();
+    formData.append('name', name);
+    formData.append('member_id', document.getElementById('member_id').value);
+    formData.append('category_id', document.getElementById('category_id').value);
+    formData.append('quantity', document.getElementById('quantity').value);
+    formData.append('purchase_date', document.getElementById('purchase_date').value);
+    formData.append('expiry_date', document.getElementById('expiry_date').value);
+
+    fetch('/add', {method:'POST', body: formData})
+    .then(r => { if(r.redirected) window.location.href = r.url; });
+}
+</script>
+{% endblock %}

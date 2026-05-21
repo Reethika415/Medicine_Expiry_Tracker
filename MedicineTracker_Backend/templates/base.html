@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<title>Medicine Expiry Tracker</title>
+<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css' rel='stylesheet'>
+<style>
+    body { background-color: #f8f9fa; }
+    .navbar { background-color: #1A6B3C !important; }
+    .badge-safe { background-color: #198754; }
+    .badge-soon { background-color: #ffc107; color: #000; }
+    .badge-expired { background-color: #dc3545; }
+</style>
+</head>
+<body>
+<nav class='navbar navbar-dark px-4 py-3'>
+<a href='/dashboard' class='navbar-brand fw-bold fs-4' style='text-decoration:none; color:white;'>
+    🍊 Medicine Tracker
+</a>
+<div>
+    <span class='text-white me-3'>Hello, {{ session.get('user_name', 'User') }}!</span>
+    <a href='/alerts' class='btn btn-warning btn-sm me-2'>🔔 Alerts</a>
+    <a href='/change-password' class='btn btn-outline-light btn-sm me-2'>🔒 Change Password</a>
+    <a href='/logout' class='btn btn-light btn-sm'>Logout</a>
+</div>
+</nav>
+<div class='container mt-4'>
+  {% block content %}{% endblock %}
+</div>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js'></script>
+</body>
+</html>
+

@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h2 class='mb-4'>🔔 Expiry Alerts</h2>
+
+{% if alerts %}
+<div class='row'>
+  {% for med in alerts %}
+<div class='col-md-6 mb-3'>
+<div class='card border-
+      {% if med.expiry_date < today %}danger
+      {% else %}warning{% endif %} shadow-sm'>
+<div class='card-body'>
+<h5 class='card-title'>💊 {{ med.name }}</h5>
+<p class='card-text'>
+<strong>Expiry Date:</strong> {{ med.expiry_date }}<br>
+<strong>Quantity Left:</strong> {{ med.quantity }}
+</p>
+        {% if med.expiry_date < today %}
+<span class='badge bg-danger fs-6'>
+          🔴 Already Expired!
+</span>
+        {% else %}
+<span class='badge bg-warning text-dark fs-6'>
+          ⚠️ Expiring Soon
+</span>
+        {% endif %}
+</div>
+</div>
+</div>
+  {% endfor %}
+</div>
+{% else %}
+<div class='alert alert-success text-center fs-5'>
+  ✅ Great! No medicines are expiring soon.
+</div>
+{% endif %}
+
+<a href='/dashboard' class='btn btn-secondary mt-3'>
+  Back to Dashboard
+</a>{% endblock %}
