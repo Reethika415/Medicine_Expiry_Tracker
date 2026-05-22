@@ -133,12 +133,12 @@ def validate_medicine():
     if name in VALID_MEDICINES:
         return jsonify({'valid': True, 'message': 'Valid medicine name ✅'})
     
-    # Partial match — accept if typed name is found within any medicine name
-    partial_matches = [m for m in VALID_MEDICINES if name in m]
-    if partial_matches:
-        return jsonify({'valid': True, 'message': f'Valid medicine name ✅'})
-    
-    # Suggestions for close matches
+    # Starts with match
+    starts_matches = [m for m in VALID_MEDICINES if m.startswith(name)]
+    if starts_matches:
+        return jsonify({'valid': True, 'message': 'Valid medicine name ✅'})
+
+    # Suggestions
     suggestions = [m for m in VALID_MEDICINES if m.startswith(name[:4])][:3]
     if suggestions:
         return jsonify({'valid': False, 'message': f'Not found. Did you mean: {", ".join(suggestions)}?'})
