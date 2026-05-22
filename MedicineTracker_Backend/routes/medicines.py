@@ -1,16 +1,17 @@
 from flask import Blueprint, render_template, request, redirect, url_for, session, jsonify
 from models import db, Medicine, FamilyMember, Category, User
 from datetime import date, timedelta
-import pandas as pd
 
 medicines = Blueprint('medicines', __name__)
 
-# Load medicine names from CSV once at startup
+# Load medicine names from txt file once at startup
 try:
-    med_df = pd.read_csv('A_Z_medicines_dataset_of_India.csv')
-    VALID_MEDICINES = set(med_df['name'].str.lower().str.strip().tolist())
+    with open('medicine_names.txt', 'r') as f:
+        VALID_MEDICINES = set(f.read().splitlines())
     print(f"✅ Loaded {len(VALID_MEDICINES)} medicine names")
 except Exception as e:
+    VALID_MEDICINES = set()
+    print(f"❌ Could not load medicines: {e}")
     VALID_MEDICINES = set()
     print(f"❌ Could not load medicines CSV: {e}")
 
