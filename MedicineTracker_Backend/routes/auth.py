@@ -19,22 +19,19 @@ def init_oauth(app):
 def home():
     return redirect(url_for('auth.login'))
 
-@auth.route('/auth/google')
+@auth.route('/google-login')
 def google_login():
     redirect_uri = url_for('auth.google_callback', _external=True)
     return oauth.google.authorize_redirect(redirect_uri)
 
-@auth.route('/auth/google/callback')
+@auth.route('/google-callback')
 def google_callback():
     token = oauth.google.authorize_access_token()
     userinfo = token['userinfo']
     email = userinfo['email']
     name = userinfo['name']
-
-    # Check if user exists
     user = User.query.filter_by(email=email).first()
     if not user:
-        # Auto-register new Google user
         user = User(name=name, email=email, password='google_oauth', phone='')
         db.session.add(user)
         db.session.flush()
@@ -50,7 +47,6 @@ def google_callback():
         for member in default_members:
             db.session.add(member)
         db.session.commit()
-
     session['user_id'] = user.user_id
     session['user_name'] = user.name
     return redirect(url_for('medicines.dashboard'))
